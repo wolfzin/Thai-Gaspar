@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thai Gaspar · Musculação e artes marciais no Centro de Gaspar (demonstração)</title>
+<meta name="description" content="Centro de Treinamento Thai Gaspar: musculação, Muay Thai, Muay Thai Kids, Jiu-Jitsu e Karatê na R. Arnoldo Schramm, 150, Centro, Gaspar/SC. Demonstração WolfStudio.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0B0D10">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* ===== Movimento (WolfStudio v3) — só roda com JS e sem "reduzir movimento" ===== */
+:root{--e:cubic-bezier(.2,.7,.2,1)}
+.anim :is(.sec-cab,.lutas li,.canto,.rounds-grade .r,.tab-horas,.luta-destaque,.luta-menor,.mestre,.porque-lista li,.nota-g,.citacoes blockquote,.cont-dados,.mapa){transition:opacity .7s var(--e) var(--d,0ms),translate .8s var(--e) var(--d,0ms),scale .8s var(--e) var(--d,0ms),rotate .8s var(--e) var(--d,0ms),transform .35s var(--e),box-shadow .35s,border-color .25s,background-color .25s}
+.anim :is(.sec-cab,.lutas li,.canto,.rounds-grade .r,.tab-horas,.luta-destaque,.luta-menor,.mestre,.porque-lista li,.nota-g,.citacoes blockquote,.cont-dados,.mapa):not(.in){opacity:0;translate:var(--tx,0px) var(--ty,22px);scale:var(--sc,1)}
+@keyframes sobe{from{opacity:0;translate:0 18px}}
+@keyframes gira{to{rotate:360deg}}
+@media print{.anim *{opacity:1!important;translate:none!important;scale:none!important;clip-path:none!important}}
+[id]{scroll-margin-top:72px}
+/* cartaz: a foto assenta, o zigue-zague de neon se desenha e pisca, o texto sobe */
+.cartaz-foto{animation:kb 2.4s var(--e) both}
+@keyframes kb{from{scale:1.14}}
+.zigue polyline{stroke-dasharray:1400;animation:neon-traco 1.8s ease .2s both}
+@keyframes neon-traco{from{stroke-dashoffset:1400}to{stroke-dashoffset:0}}
+.zigue{animation:neon 2.4s steps(1) 1.9s both}
+@keyframes neon{0%{opacity:.85}8%{opacity:.25}14%{opacity:.85}20%{opacity:.4}26%,100%{opacity:.85}}
+.cartaz-in>*{animation:sobe .8s var(--e) .25s both}
+.cartaz-in>:nth-child(2){animation-delay:.35s}.cartaz-in>:nth-child(3){animation-delay:.45s}.cartaz-in>:nth-child(4){animation-delay:.55s}.cartaz-in>:nth-child(5){animation-delay:.65s}.cartaz-in>:nth-child(6){animation-delay:.75s}
+.selo-desde{animation:carimba .55s cubic-bezier(.3,1.4,.5,1) 1.1s both}
+@keyframes carimba{from{opacity:0;scale:1.9}}
+.placar>div{animation:sobe .6s var(--e) both}
+.placar>:nth-child(1){animation-delay:.6s}.placar>:nth-child(2){animation-delay:.7s}.placar>:nth-child(3){animation-delay:.8s}.placar>:nth-child(4){animation-delay:.9s}
+.status.aberto .ponto{animation:pisca-ponto 1.6s ease-in-out infinite}
+@keyframes pisca-ponto{50%{opacity:.35}}
+/* card da casa: o número de cada luta entra de lado */
+.lutas .n{transition:translate .6s var(--e) calc(var(--d,0ms) + .15s),opacity .6s calc(var(--d,0ms) + .15s)}
+.anim .lutas li:not(.in) .n{translate:-18px 0;opacity:0}
+/* rounds: fotos com zoom */
+.r img{transition:scale .9s var(--e)}
+.r:hover img{scale:1.06}
+.anim .rounds-grade .r{--sc:.95;--ty:0px}
+/* cinturão: números contam */
+.numeros b{font-variant-numeric:tabular-nums}
+.luta-destaque:hover,.luta-menor:hover{transform:translateY(-4px)}
+.mestre img{transition:scale .9s var(--e)}
+.mapa svg{transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.mapa:hover svg{transform:translateY(-6px)}
+.bt-linha{transition:transform .15s,background-color .15s}
+.bt-linha:hover{transform:translateY(-2px)}
+.nota-g b{font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+<script>(function(d){if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion:reduce)').matches)d.classList.add('anim')})(document.documentElement)</script>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<div class="demo-faixa" role="note">Demonstração WolfStudio — não é o site oficial.</div>
+<header class="topo">
+  <a class="marca" href="#inicio" aria-label="Thai Gaspar, início">THAI <span>GASPAR</span></a>
+  <p class="status" id="status" aria-live="polite"><span class="ponto" aria-hidden="true"></span><span id="status-txt">Horário: ter a sex 05:00–23:00</span></p>
+  <a class="bt bt-azul bt-topo" href="https://wa.me/5547991242382?text=Ol%C3%A1!%20Quero%20informa%C3%A7%C3%B5es%20sobre%20os%20treinos%20na%20Thai%20Gaspar." target="_blank" rel="noopener">WhatsApp</a>
+</header>
+
+<main id="conteudo" tabindex="-1">
+<section class="cartaz" id="inicio" aria-labelledby="titulo">
+  <img width="900" height="1200" class="cartaz-foto" src="assets/img/sala-iron-tech-luzes-azuis.jpg" alt="Sala de musculação da Thai Gaspar com aparelhos pretos e luzes de LED azuis em zigue-zague no teto" fetchpriority="high">
+  <svg class="zigue" width="1200" height="60" viewBox="0 0 1200 60" aria-hidden="true" focusable="false"><polyline points="0,50 100,10 200,50 300,10 400,50 500,10 600,50 700,10 800,50 900,10 1000,50 1100,10 1200,50" fill="none" stroke="#2F6BFF" stroke-width="4"/></svg>
+  <div class="cartaz-in">
+    <p class="selo-desde">desde<br>2013</p>
+    <p class="cartaz-sobre">Centro de Treinamento · R. Arnoldo Schramm, 150</p>
+    <h1 id="titulo">Musculação e artes marciais no Centro de Gaspar.</h1>
+    <p class="cartaz-vs">Muay Thai <i>·</i> Jiu-Jitsu <i>·</i> Karatê <i>·</i> Nutri</p>
+    <div class="placar" role="list" aria-label="Horários de funcionamento">
+      <div role="listitem"><span>Ter a sex</span><b>05:00</b><em>até</em><b>23:00</b></div>
+      <div role="listitem"><span>Sábado</span><b>09:00</b><em>até</em><b>15:00</b></div>
+      <div role="listitem"><span>Domingo</span><b>08:00</b><em>até</em><b>12:00</b></div>
+      <div role="listitem" class="placar-seg"><span>Segunda</span><b>Fechado</b></div>
+    </div>
+    <div class="cartaz-ctas">
+      <a class="bt bt-azul" href="https://wa.me/5547991242382?text=Ol%C3%A1!%20Quero%20informa%C3%A7%C3%B5es%20sobre%20os%20treinos%20na%20Thai%20Gaspar." target="_blank" rel="noopener">Chamar no WhatsApp · (47) 99124-2382</a>
+      <a class="bt bt-linha" href="#card">Ver modalidades</a>
+    </div>
+  </div>
+</section>
+
+<section class="card-luta" id="card" aria-labelledby="t-card">
+  <div class="sec-cab">
+    <p class="rotulo">Card da casa</p>
+    <h2 id="t-card">Cinco lutas no mesmo endereço</h2>
+    <p>Modalidades da descrição oficial da academia no Google.</p>
+  </div>
+  <ol class="lutas">
+    <li><span class="n">01</span><div><h3>Musculação</h3><p>Sala moderna com gramado sintético, esteiras sob o neon azul e aparelhos Iron Tech.</p></div></li>
+    <li><span class="n">02</span><div><h3>Muay Thai</h3><p>A arte que dá nome à casa. Equipe com títulos estaduais e nacionais.</p></div></li>
+    <li><span class="n">03</span><div><h3>Muay Thai Kids</h3><p>A partir dos 5 anos. Post da academia no Google cita terças e quintas às 18h30. <strong class="ac">Horário atual a confirmar</strong></p></div></li>
+    <li><span class="n">04</span><div><h3>Jiu-Jitsu</h3><p>Na grade de modalidades da descrição oficial.</p></div></li>
+    <li><span class="n">05</span><div><h3>Karatê</h3><p>Na grade de modalidades da descrição oficial.</p></div></li>
+  </ol>
+  <div class="canto">
+    <p><b>No corner:</b> nutricionista esportivo, citado na descrição oficial da academia.</p>
+    <p class="nota"><b>A confirmar:</b> o banner da fachada também mostra MMA, Capoeira, Boxe, Yoga, Judô, Body Build e “Artes Marciais e Artes Culturais”. Não sabemos se essas turmas estão abertas hoje; pergunte no WhatsApp.</p>
+  </div>
+</section>
+
+<section class="rounds" aria-labelledby="t-rounds">
+  <div class="sec-cab">
+    <p class="rotulo">Por dentro</p>
+    <h2 id="t-rounds">Gramado verde, neon azul</h2>
+  </div>
+  <div class="rounds-grade">
+    <figure class="r r1"><img loading="lazy" decoding="async" width="1600" height="744" src="assets/img/sala-musculacao-panorama.jpg" alt="Vista ampla da sala de musculação com piso de grama sintética verde e aparelhos ao redor"><figcaption><b>R1</b> A sala inteira</figcaption></figure>
+    <figure class="r r2"><img loading="lazy" decoding="async" width="800" height="1067" src="assets/img/esteiras-gramado-verde.jpg" alt="Fileira de esteiras sobre o gramado sintético, com luzes de LED no teto"><figcaption><b>R2</b> Esteiras</figcaption></figure>
+    <figure class="r r3"><img loading="lazy" decoding="async" width="1000" height="697" src="assets/img/sala-musculacao-detalhe-dir.jpg" alt="Homem posando na sala de musculação, entre aparelhos e o gramado sintético"><figcaption><b>R3</b> Aparelhos</figcaption></figure>
+    <figure class="r r4"><img loading="lazy" decoding="async" width="800" height="744" src="assets/img/sala-musculacao-detalhe-esq.jpg" alt="Canto da sala de musculação com aparelhos e janelas"><figcaption><b>R4</b> Treino livre</figcaption></figure>
+    <figure class="r r5"><img loading="lazy" decoding="async" width="1400" height="788" src="assets/img/fachada-arnoldo-schramm.jpg" alt="Fachada do prédio na Rua Arnoldo Schramm, com a academia no segundo andar"><figcaption><b>R5</b> A academia fica no 2º andar</figcaption></figure>
+  </div>
+</section>
+
+<section class="horas" id="horario" aria-labelledby="t-horas">
+  <div class="sec-cab">
+    <p class="rotulo">Placar</p>
+    <h2 id="t-horas">Horário de treino</h2>
+    <p>Conforme o Google. Feriado de 12/10: horário a confirmar.</p>
+  </div>
+  <table class="tab-horas">
+    <caption class="sr">Horário de funcionamento por dia da semana</caption>
+    <tbody>
+      <tr data-d="1" class="off"><th scope="row">Seg</th><td>Fechado</td></tr>
+      <tr data-d="2"><th scope="row">Ter</th><td>05:00 – 23:00</td></tr>
+      <tr data-d="3"><th scope="row">Qua</th><td>05:00 – 23:00</td></tr>
+      <tr data-d="4"><th scope="row">Qui</th><td>05:00 – 23:00</td></tr>
+      <tr data-d="5"><th scope="row">Sex</th><td>05:00 – 23:00</td></tr>
+      <tr data-d="6"><th scope="row">Sáb</th><td>09:00 – 15:00</td></tr>
+      <tr data-d="0"><th scope="row">Dom</th><td>08:00 – 12:00</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="cinturao" aria-labelledby="t-cint">
+  <div class="sec-cab">
+    <p class="rotulo">Cinturão</p>
+    <h2 id="t-cint">Resultados da equipe</h2>
+  </div>
+  <div class="cint-grade">
+    <article class="luta-destaque">
+      <p class="data">Estadual · Lages · fev/2026</p>
+      <ul class="numeros">
+        <li><b>10</b> atletas</li><li><b>9</b> campeões</li><li><b>1</b> vice</li>
+      </ul>
+      <p>Vice-campeonato geral por equipes e seletiva para o Brasileiro 2026. Destaques: Guilherme Rodrigues e João Vitor Cechetto, bicampeões, e João de Oliveira Araújo Junior, tetracampeão.</p>
+      <p class="fonte">Fonte: TV Gaspar, 26/02/2026</p>
+    </article>
+    <article class="luta-menor">
+      <p class="data">Brasileiro · 2019</p>
+      <ul class="numeros">
+        <li><b>5</b> ouros</li><li><b>2</b> pratas</li><li><b>3º</b> por equipe</li>
+      </ul>
+      <p>Dez atletas da Thai Gaspar na equipe campeã brasileira de Muay Thai, em São Paulo.</p>
+      <p class="fonte">Fonte: Jornal Metas, 15/10/2019</p>
+    </article>
+    <figure class="mestre">
+      <img loading="lazy" decoding="async" width="1200" height="701" src="assets/img/charles-khan-13-2013.jpg" alt="Cerimônia do 13º Khan em 2013: mestres e atletas em frente ao ringue, um deles com o certificado">
+      <figcaption><b>Charles Prebianca</b> · 13º Khan, Mestre em Treinamento (jan/2013). <span class="fonte">Fonte: Jornal Metas, 22/01/2013</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="porque" aria-labelledby="t-porque">
+  <div class="sec-cab">
+    <p class="rotulo">Por que treinar aqui</p>
+    <h2 id="t-porque">O que os alunos mais citam</h2>
+  </div>
+  <ul class="porque-lista">
+    <li><b>Equipamentos</b> “aparelhos de ótima qualidade”; “equipamentos novos” está entre os destaques das avaliações no Google.</li>
+    <li><b>Atendimento</b> “funcionários muito educados e atenciosos”, “profissionais excelentes desde a recepção”.</li>
+    <li><b>Climatização</b> “Bem climatizada”, na avaliação mais recente.</li>
+  </ul>
+</section>
+
+<section class="avaliacoes" aria-labelledby="t-av">
+  <div class="nota-g"><b>4,9</b><span>★★★★★</span><p>135 avaliações no Google</p></div>
+  <h2 id="t-av" class="sr">Avaliações</h2>
+  <div class="citacoes">
+    <blockquote><p>“Bem climatizada, funcionários muito educados e atenciosos. Nota 10.”</p><footer>Max Hedroom · 5★ · 12/06/2026</footer></blockquote>
+    <blockquote><p>“Esta academia vem me surpreendendo cada vez mais… equipamentos… equipe é atenciosa”</p><footer>Leandro Pereira · 5★ · 10/11/2025</footer></blockquote>
+    <blockquote><p>“a melhor academia sem dúvidas, aparelhos de ótima qualidade e profissionais excelentes desde a recepção”</p><footer>Beatriz Martins · 5★ · 10/11/2025</footer></blockquote>
+  </div>
+</section>
+
+<section class="contato" id="contato" aria-labelledby="t-cont">
+  <div class="sec-cab">
+    <p class="rotulo">Pesagem</p>
+    <h2 id="t-cont">Venha conhecer</h2>
+  </div>
+  <div class="cont-grade">
+    <div class="cont-dados">
+      <p class="end">R. Arnoldo Schramm, 150<br>Centro · Gaspar/SC · 89110-097</p>
+      <p>A academia fica no 2º andar. O Google indica entrada, estacionamento, banheiro e assentos acessíveis para cadeirantes.</p>
+      <ul class="links">
+        <li><a href="https://wa.me/5547991242382?text=Ol%C3%A1!%20Quero%20informa%C3%A7%C3%B5es%20sobre%20os%20treinos%20na%20Thai%20Gaspar." target="_blank" rel="noopener">WhatsApp (47) 99124-2382</a></li>
+        <li><a href="mailto:charlesprebianca@hotmail.com">charlesprebianca@hotmail.com</a></li>
+        <li><a href="https://www.instagram.com/thaigasparmusculacao/" target="_blank" rel="noopener">Instagram @thaigasparmusculacao</a></li>
+        <li><a href="https://www.facebook.com/thaigaspar" target="_blank" rel="noopener">Facebook /thaigaspar</a></li>
+      </ul>
+    </div>
+    <a class="mapa" href="https://www.google.com/maps/search/?api=1&amp;query=Academia%20Thai%20Gaspar%2C%20R.%20Arnoldo%20Schramm%2C%20150%2C%20Gaspar%20SC" target="_blank" rel="noopener">
+      <svg width="64" height="64" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="currentColor"/></svg>
+      <span>Abrir rota no Google Maps</span>
+    </a>
+  </div>
+</section>
+</main>
+
+<footer class="rodape">
+  <p><b>Centro de Treinamento Thai Gaspar</b> · CNPJ 19.291.637/0001-02 · Gaspar/SC</p>
+  <p>Demonstração feita por WolfStudio. Não é o site oficial da academia.</p>
+</footer>
+<script src="assets/js/main.js"></script>
+<script>
+/* Movimento (WolfStudio v3): revelar ao rolar, contadores e menu ativo. */
+(function(){
+  var R=document.documentElement; if(!R.classList.contains('anim')) return;
+  try{
+    var SEL='.sec-cab,.lutas li,.canto,.rounds-grade .r,.tab-horas,.luta-destaque,.luta-menor,.mestre,.porque-lista li,.nota-g,.citacoes blockquote,.cont-dados,.mapa', CNT='.nota-g b';
+    var io=new IntersectionObserver(function(es){
+      var n=0;
+      es.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var el=e.target; io.unobserve(el);
+        if(n) el.style.setProperty('--d',Math.min(n,7)*90+'ms');
+        n++; el.classList.add('in');
+        setTimeout(function(){el.style.removeProperty('--d')},1700);
+      });
+    },{threshold:.08,rootMargin:'0px 0px -5% 0px'});
+    var pend=[].slice.call(document.querySelectorAll(SEL));
+    pend.forEach(function(el){io.observe(el)});
+    /* rolagem rápida pode pular um bloco: o que já ficou para cima aparece sem esperar */
+    var tv=0;
+    function varre(){pend=pend.filter(function(el){
+      if(el.classList.contains('in')) return false;
+      if(el.getBoundingClientRect().bottom<0){io.unobserve(el);el.classList.add('in');return false}
+      return true;
+    })}
+
+    function conta(el){
+      var tn=null;
+      [].some.call(el.childNodes,function(c){if(c.nodeType===3&&/\d,\d/.test(c.nodeValue)){tn=c;return true}});
+      if(!tn) return;
+      var full=tn.nodeValue, m=full.match(/(\d+),(\d)/), alvo=parseFloat(m[1]+'.'+m[2]), t0=null;
+      function f(t){
+        if(!t0) t0=t;
+        var p=Math.min(1,(t-t0)/1100), v=alvo*(1-Math.pow(1-p,3));
+        tn.nodeValue=p<1?full.replace(m[0],v.toFixed(1).replace('.',',')):full;
+        if(p<1) requestAnimationFrame(f);
+      }
+      requestAnimationFrame(f);
+    }
+    var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){cio.unobserve(e.target);conta(e.target)}})},{threshold:.6});
+    [].forEach.call(document.querySelectorAll(CNT),function(el){cio.observe(el)});
+
+    var links=[].slice.call(document.querySelectorAll('nav a[href^="#"]')), mapa={};
+    var sio=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      links.forEach(function(a){a.classList.remove('on')}); mapa[e.target.id].classList.add('on');
+    })},{rootMargin:'-40% 0px -55% 0px'});
+    links.forEach(function(a){var s=document.getElementById(a.getAttribute('href').slice(1)); if(s&&s.id!=='conteudo'){mapa[s.id]=a;sio.observe(s)}});
+
+    var espera=false;
+    function rolar(){
+      espera=false; var y=window.scrollY||0;
+      R.classList.toggle('rolou',y>8);
+      clearTimeout(tv); if(pend.length) tv=setTimeout(varre,180);
+      if(y<160) links.forEach(function(a){a.classList.remove('on')});
+
+    }
+    window.addEventListener('scroll',function(){if(!espera){espera=true;requestAnimationFrame(rolar)}},{passive:true});
+    window.addEventListener('resize',rolar);
+    rolar();
+    /* números inteiros contam até o valor */
+    function inteiro(el,atraso){
+      var tn=el&&el.firstChild; if(!tn||tn.nodeType!==3) return;
+      var fim=tn.nodeValue, alvo=parseInt(fim,10); if(!(alvo>0)) return;
+      var o=new IntersectionObserver(function(es){
+        if(!es[0].isIntersecting) return; o.disconnect();
+        setTimeout(function(){var t0=null;(function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1300);
+          tn.nodeValue=p<1?String(Math.round(alvo*(1-Math.pow(1-p,3)))):fim; if(p<1) requestAnimationFrame(f);})(performance.now())},atraso||0);
+      },{threshold:.5});
+      o.observe(el);
+    }
+    [].forEach.call(document.querySelectorAll('.numeros b'),function(b){inteiro(b)});
+  }catch(err){R.classList.remove('anim')}
+})();
+</script>
+</body>
+</html>

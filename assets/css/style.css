@@ -1,0 +1,140 @@
+/* Thai Gaspar · "Cartaz de luta sob neon azul" (demonstração WolfStudio) */
+:root{--preto:#0B0D10;--maq:#2A2E35;--azul:#2F6BFF;--azul-claro:#8FB0FF;--turf:#1FA84A;--rosa:#E23A8C;--off:#F4F6F8;--cinza:#B9C0CA;
+--titulo:'Anton',Impact,'Arial Narrow',sans-serif;--texto:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--preto);color:var(--off);font:400 1.0625rem/1.6 var(--texto)}
+img{display:block;max-width:100%;height:auto}
+figure,blockquote{margin:0}
+h1,h2,h3{font-family:var(--titulo);font-weight:400;text-transform:uppercase;line-height:1.02;letter-spacing:.01em;margin:0}
+a{color:var(--azul-claro)}
+:focus-visible{outline:3px solid var(--turf);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.pular{position:absolute;left:12px;top:-60px;z-index:100;background:var(--turf);color:#04150a;padding:12px 18px;font-weight:800;border-radius:4px;text-decoration:none}
+.pular:focus{top:12px}
+.demo-faixa{background:var(--rosa);color:#fff;text-align:center;font-size:.875rem;font-weight:600;padding:6px 12px}
+.topo{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:14px;padding:10px clamp(14px,4vw,40px);background:rgba(11,13,16,.94);border-bottom:2px solid var(--azul);backdrop-filter:blur(6px)}
+.marca{font-family:var(--titulo);font-size:1.5rem;letter-spacing:.04em;color:var(--off);text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
+.marca span{color:var(--azul)}
+.status{margin:0 0 0 auto;display:flex;align-items:center;gap:8px;font-size:.875rem;font-weight:600;color:var(--cinza)}
+.ponto{width:10px;height:10px;border-radius:50%;background:var(--cinza);flex:none}
+.status.aberto{color:#7fe3a0}.status.aberto .ponto{background:var(--turf);box-shadow:0 0 10px var(--turf)}
+.status.fechado .ponto{background:var(--rosa)}
+.bt{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 22px;border-radius:3px;font:800 1rem/1.2 var(--texto);text-decoration:none;text-align:center;transition:transform .15s,background-color .15s}
+.bt-azul{background:var(--azul);color:#fff;box-shadow:0 0 0 1px #6f97ff inset,0 0 26px rgba(47,107,255,.55)}
+.bt-azul:hover{background:#1f57e6;transform:translateY(-2px)}
+.bt-linha{border:2px solid var(--turf);color:var(--off)}
+.bt-linha:hover{background:var(--turf);color:#04150a}
+.bt-topo{min-height:44px;padding:8px 16px}
+/* cartaz */
+.cartaz{position:relative;overflow:hidden;min-height:min(92vh,860px);display:grid;place-items:center;text-align:center;padding:72px clamp(16px,5vw,60px) 92px;border-bottom:14px solid var(--turf)}
+.cartaz::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 35%,rgba(11,13,16,.55),rgba(11,13,16,.93) 70%),linear-gradient(180deg,rgba(11,13,16,.2),rgba(11,13,16,.95));z-index:1}
+.cartaz-foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:saturate(1.15)}
+.zigue{position:absolute;left:0;right:0;top:22px;width:100%;height:46px;z-index:2;filter:drop-shadow(0 0 8px #2F6BFF);opacity:.85}
+.cartaz-in{position:relative;z-index:3;max-width:1060px}
+.selo-desde{position:absolute;right:-6px;top:-44px;margin:0;width:96px;height:96px;border-radius:50%;background:var(--rosa);color:#fff;display:grid;place-items:center;font:400 1.15rem/1 var(--titulo);text-transform:uppercase;transform:rotate(12deg);box-shadow:0 0 0 4px var(--preto),0 0 0 6px var(--rosa)}
+.cartaz-sobre{margin:0 0 14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:.8125rem;color:var(--azul-claro)}
+.cartaz h1{font-size:clamp(2.5rem,9.4vw,6.6rem);line-height:.95;text-shadow:0 4px 30px rgba(0,0,0,.6)}
+.cartaz-vs{margin:18px 0 30px;font:400 clamp(1.25rem,3.4vw,2rem)/1.2 var(--titulo);text-transform:uppercase;letter-spacing:.06em;color:var(--turf)}
+.cartaz-vs i{font-style:normal;color:var(--azul)}
+.placar{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 auto 30px;max-width:880px}
+.placar div{background:#05070a;border:1px solid #1f2a44;box-shadow:inset 0 0 22px rgba(47,107,255,.18);padding:12px 8px;display:flex;flex-direction:column;align-items:center}
+.placar span{font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--cinza)}
+.placar b{font:400 clamp(1.7rem,3.6vw,2.6rem)/1.05 var(--titulo);color:#d7e3ff;text-shadow:0 0 12px rgba(47,107,255,.9);font-variant-numeric:tabular-nums}
+.placar em{font-style:normal;font-size:.75rem;color:var(--cinza)}
+.placar .placar-seg b{color:var(--rosa);text-shadow:0 0 12px rgba(226,58,140,.6);margin:auto 0}
+.cartaz-ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+/* seções */
+section:not(.cartaz){padding:clamp(56px,8vw,104px) clamp(16px,5vw,60px)}
+.sec-cab{max-width:1180px;margin:0 auto 34px}
+.rotulo{display:inline-block;margin:0 0 10px;padding:4px 10px;background:var(--turf);color:#04150a;font-weight:800;font-size:.8125rem;letter-spacing:.14em;text-transform:uppercase}
+.sec-cab h2{font-size:clamp(2.1rem,6vw,4rem)}
+.sec-cab p{color:var(--cinza);margin:10px 0 0}
+.lutas{list-style:none;margin:0 auto;padding:0;max-width:1180px;display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:2px solid var(--azul)}
+.lutas li{display:flex;flex-direction:column;gap:10px;padding:22px 18px 26px;border-right:1px solid #232833;background:linear-gradient(180deg,#11151c,transparent)}
+.lutas li:last-child{border-right:0}
+.lutas .n{font:400 4.2rem/1 var(--titulo);color:transparent;-webkit-text-stroke:1.5px var(--azul)}
+.lutas h3{font-size:1.75rem}
+.lutas p{margin:6px 0 0;color:#cfd5dd;font-size:.96875rem}
+.ac{display:inline-block;margin-top:8px;padding:2px 8px;border:1px dashed var(--rosa);color:#ff9bc9;font-size:.8125rem;font-weight:600}
+.canto{max-width:1180px;margin:26px auto 0;display:grid;grid-template-columns:1fr 1.4fr;gap:18px}
+.canto p{margin:0;padding:16px 18px;background:var(--maq);border-left:4px solid var(--turf)}
+.canto .nota{border-left-color:var(--rosa);background:#1a1d23;color:#d9dde3;font-size:.96875rem}
+.rounds{background:#07090c}
+.rounds-grade{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:210px;gap:10px}
+.r{position:relative;overflow:hidden;background:var(--maq)}
+.r img{width:100%;height:100%;object-fit:cover}
+.r figcaption{position:absolute;left:0;bottom:0;background:rgba(11,13,16,.86);padding:6px 12px;font-size:.875rem;font-weight:600}
+.r figcaption b{font-family:var(--titulo);font-weight:400;color:var(--azul);margin-right:6px;font-size:1.05rem}
+.r1{grid-column:1/5;grid-row:span 2}.r2{grid-column:5/7;grid-row:span 2}.r3{grid-column:1/3}.r4{grid-column:3/5}.r5{grid-column:5/7}
+.tab-horas{max-width:1180px;width:100%;margin:0 auto;border-collapse:separate;border-spacing:8px;display:block}
+.tab-horas tbody{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.tab-horas tr{display:flex;flex-direction:column;align-items:center;gap:6px;padding:18px 6px;background:#05070a;border:1px solid #1f2a44}
+.tab-horas th{font:800 .875rem/1 var(--texto);letter-spacing:.14em;text-transform:uppercase;color:var(--cinza)}
+.tab-horas td{font:400 1.45rem/1.15 var(--titulo);color:#d7e3ff;text-shadow:0 0 10px rgba(47,107,255,.8);text-align:center}
+.tab-horas tr.off td{color:var(--rosa);text-shadow:none}
+.tab-horas tr.hoje{border:2px solid var(--turf);box-shadow:0 0 18px rgba(31,168,74,.35)}
+.hoje-tag{display:inline-block;margin-left:4px;padding:1px 6px;background:var(--turf);color:#04150a;font-size:.6875rem;letter-spacing:.06em}
+.cint-grade{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:16px}
+.luta-destaque,.luta-menor{background:var(--off);color:var(--preto);padding:26px 28px}
+.luta-destaque{grid-row:span 2;border-top:10px solid var(--azul)}
+.luta-menor{border-top:10px solid var(--turf)}
+.data{margin:0 0 12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.8125rem}
+.numeros{list-style:none;margin:0 0 14px;padding:0;display:flex;flex-wrap:wrap;gap:6px 26px;font-weight:600}
+.numeros b{display:block;font:400 clamp(3rem,7vw,5.4rem)/1 var(--titulo);color:var(--azul)}
+.luta-menor .numeros b{font-size:clamp(2.4rem,5vw,3.6rem);color:#14833a}
+.luta-destaque p,.luta-menor p{margin:0 0 10px}
+.fonte{font-size:.8125rem;color:#5b626d}
+.mestre{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;align-items:center;background:var(--maq)}
+.mestre img{width:100%;height:100%;max-height:380px;object-fit:cover}
+.mestre figcaption{padding:22px 26px;font-size:1.05rem}
+.mestre .fonte{display:block;margin-top:8px;color:var(--cinza)}
+.porque{background:linear-gradient(180deg,#0d1a12,var(--preto))}
+.porque-lista{list-style:none;margin:0 auto;padding:0;max-width:1180px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.porque-lista li{padding:22px;border:1px solid #23402d;background:#0c130f}
+.porque-lista b{display:block;font:400 1.9rem/1.1 var(--titulo);text-transform:uppercase;color:var(--turf);margin-bottom:8px}
+.avaliacoes{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:240px 1fr;gap:28px;align-items:start}
+.nota-g{text-align:center;padding:22px;border:2px solid var(--azul);box-shadow:0 0 24px rgba(47,107,255,.35)}
+.nota-g b{display:block;font:400 5.4rem/1 var(--titulo)}
+.nota-g span{color:#ffcc33;letter-spacing:.1em}
+.nota-g p{margin:6px 0 0;color:var(--cinza);font-size:.9375rem}
+.citacoes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.citacoes blockquote{padding:20px;background:#12161d;border-top:3px solid var(--azul)}
+.citacoes p{margin:0 0 12px;font-size:1.05rem}
+.citacoes footer{font-size:.875rem;color:var(--cinza);font-weight:600}
+.contato{background:#07090c}
+.cont-grade{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:18px}
+.end{font:400 clamp(1.6rem,3.5vw,2.4rem)/1.1 var(--titulo);text-transform:uppercase;margin:0 0 14px}
+.cont-dados p{color:#d1d6dd}
+.links{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:6px}
+.links a{display:inline-flex;align-items:center;min-height:44px;font-weight:600;color:var(--off);text-decoration-color:var(--azul);text-underline-offset:4px;overflow-wrap:anywhere}
+.links a:hover{color:var(--azul-claro)}
+.mapa{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:260px;padding:24px;text-decoration:none;color:var(--off);font:400 1.6rem/1.1 var(--titulo);text-transform:uppercase;text-align:center;
+background:linear-gradient(rgba(11,13,16,.55),rgba(11,13,16,.55)),repeating-linear-gradient(90deg,#14532d 0 26px,#178a3f 26px 52px);border:2px solid var(--turf)}
+.mapa svg{color:var(--azul);filter:drop-shadow(0 0 10px var(--azul))}
+.mapa:hover{background:linear-gradient(rgba(11,13,16,.3),rgba(11,13,16,.3)),repeating-linear-gradient(90deg,#14532d 0 26px,#178a3f 26px 52px)}
+.rodape{padding:28px clamp(16px,5vw,60px) 36px;border-top:2px solid var(--azul);text-align:center;color:var(--cinza);font-size:.9375rem}
+.rodape p{margin:4px 0}
+@media (max-width:980px){
+ .lutas{grid-template-columns:1fr 1fr}.lutas li{border-bottom:1px solid #232833}
+ .citacoes,.porque-lista{grid-template-columns:1fr}
+ .avaliacoes{grid-template-columns:1fr}
+ .tab-horas tbody{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:720px){
+ .status{font-size:.75rem}.marca{font-size:1.2rem}
+ .placar{grid-template-columns:1fr 1fr}
+ .selo-desde{width:74px;height:74px;font-size:.95rem;top:-58px;right:0}
+ .lutas{grid-template-columns:1fr}.lutas li{flex-direction:row;align-items:flex-start;gap:16px;border-right:0}
+ .lutas .n{font-size:3rem;min-width:62px}
+ .canto,.cint-grade,.mestre,.cont-grade{grid-template-columns:1fr}
+ .luta-destaque{grid-row:auto}
+ .rounds-grade{grid-template-columns:1fr 1fr;grid-auto-rows:170px}
+ .r1{grid-column:1/-1}.r2{grid-column:1/2;grid-row:span 2}.r3,.r4{grid-column:2/3}.r5{grid-column:1/-1}
+ .tab-horas tbody{grid-template-columns:repeat(2,1fr)}
+ .tab-horas tr:first-child{grid-column:1/-1}
+ .cartaz-ctas .bt{width:100%}
+}
+@media (max-width:420px){.bt-topo{padding:8px 12px}.status #status-txt{max-width:9.5em}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
